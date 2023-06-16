@@ -1,0 +1,10 @@
+org\example\entity\LogResponse$LogResponseBuilder.class
+org\example\entity\LogResponse.class
+org\example\Main.class
+org\example\repository\JwtRepository.class
+org\example\entity\AuthRequest.class
+org\example\service\GetVaultCredentialsService.class
+org\example\controller\VaultController.class
+org\example\service\ValidateTokenService.class
+org\example\service\GetTokenService.class
+org\example\repository\DaemonRepository.class

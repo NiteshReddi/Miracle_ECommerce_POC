@@ -1,0 +1,59 @@
+version: '3'
+services:
+  service1:
+    build:
+      context: C:\Users\Nitesh Reddy\IdeaProjects\sample\Client-Service
+      dockerfile: Dockerfile
+    image: client-service.jar:latest
+    ports:
+      - 8080:8080
+    environment:
+      - SERVER_PORT=8080
+
+  service2:
+    build:
+      context: C:\Users\Nitesh Reddy\IdeaProjects\sample\JWT-Service
+      dockerfile: Dockerfile
+    image: jwt-service.jar:latest
+    environment:
+      - SERVER_PORT=8091
+
+  service3:
+    build:
+      context: C:\Users\Nitesh Reddy\IdeaProjects\sample\Vault-Service
+      dockerfile: Dockerfile
+    image: vault-service.jar:latest
+    environment:
+      - SERVER_PORT=8092
+      - SPRING_VAULT_CLOUD_TOKEN=00000000-0000-0000-0000-000000000000
+      - SPRING_VAULT_CLOUD_URI=http://127.0.0.1:8200/v1/secret/data/MyApp
+
+  service4:
+    build:
+      context: C:\Users\Nitesh Reddy\IdeaProjects\sample\Create-Order-Api-Service
+      dockerfile: Dockerfile
+    image: create-order-service.jar:latest
+    environment:
+      - SERVER_PORT=8093
+    depends_on:
+      - mongo
+
+
+  service5:
+    build:
+      context: C:\Users\Nitesh Reddy\IdeaProjects\sample\Get-Order-Api-Service
+      dockerfile: Dockerfile
+    image: get-order-service.jar:latest
+    environment:
+      - SERVER_PORT=8094
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=OrderDetails

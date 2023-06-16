@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Get-Order-Api-Service" />
+        <module name="Vault-Service" />
+        <module name="Create-Order-Api-Service" />
+        <module name="spring-security-jwt" />
+        <module name="Client-Service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Client-Service" options="-parameters" />
+      <module name="Create-Order-Api-Service" options="-parameters" />
+      <module name="Get-Order-Api-Service" options="-parameters" />
+      <module name="Vault-Service" options="-parameters" />
+      <module name="spring-security-jwt" options="-parameters" />
+    </option>
+  </component>
+</project>
