@@ -21,8 +21,8 @@ This example app shows a simple eCommerce Application. Developed RestFul APIs us
 To install this application, run the following commands:
 
 ```bash
-git clone https://github.com/NiteshReddi/JWT-EcomApp/edit/feature/test 
-cd JWT-EcomApp
+git clone https://github.com/NiteshReddi/Miracle_ECommerce_POC.git 
+cd Miracle_ECommerce_POC
 ```
 
 This will get a copy of the project installed locally. To configure all of its dependencies and start each app, follow the instructions below.
