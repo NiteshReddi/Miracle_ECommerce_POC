@@ -45,7 +45,7 @@ You must configure in the Vault-Service module in file `application.properties` 
 
 1) Client-Service: This module we have multiple Api's to interact with all the other services to create Order, Get order Details, Store user Credentials in vault and retrieve user Credentials from vault.
 
-2) JWTToken-Service: This module is used to validate client user on server side. This module has two services, one to generate JWT Token for the client user and other to validate JWT token when accessing other service modules.
+2) JWT-Service: This module is used to validate client user on server side. This module has two services, one to generate JWT Token for the client user and other to validate JWT token when accessing other service modules.
 
 3) Vault-Service: This module is used to Store user credentials in Hashicorp vault and retrieve them when required. 
 
