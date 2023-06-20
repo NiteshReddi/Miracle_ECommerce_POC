@@ -25,8 +25,8 @@ public class OrderController {
     @PostMapping("/createOrderService")
     public String saveOrder(@RequestBody Order orderDetails){
 
-     //  ResponseEntity.ok(getTokenService.getToken());
-     //  ResponseEntity.ok(validateTokenService.validateToken());
+       ResponseEntity.ok(getTokenService.getToken());
+       ResponseEntity.ok(validateTokenService.validateToken());
 
         orderRepository.save(orderDetails);
 
