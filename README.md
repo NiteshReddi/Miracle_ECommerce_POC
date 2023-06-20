@@ -49,7 +49,7 @@ You must configure in the Vault-Service module in file `application.properties` 
 
 3) Vault-Service: This module is used to Store user credentials in Hashicorp vault and retrieve them when required. 
 
-4) Create-Order-Api-Service: This module is used to place an order with the appropriate order details. Once the Api is called, order is placed and order details are stored in DB.
+4) Create-Order-Api-Service: This module is used to place orders with the appropriate order details. Once the Api is called, order is placed and order details are stored in DB.
 
 5) Get-Order-Api-Service: This module is used to GET orderDetails. Once the Api is called, order details are retrieved from DB.
 
