@@ -53,6 +53,8 @@ You must configure in the Vault-Service module in file `application.properties` 
 
 5) Get-Order-Api-Service: This module is used to GET orderDetails. Once the Api is called, order details are retrieved from DB.
 
+6) Update-Order-Api-Service: This module is used to Update orderDetails based on order_Id. Once the Api is called, order details are updated in DB based on given Order_Id.
+
 ## Links
 
 This example uses the following open source libraries:
