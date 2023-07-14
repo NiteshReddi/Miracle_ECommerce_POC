@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns="http://camel.apache.org/schema/spring"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+            http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <route id="CamelProducerRoute">
+        <from uri="direct:UpdateOrderDetails"/>
+        <convertBodyTo type="org.example.model.Order" />
+        <marshal>
+            <json library="Jackson"/>
+        </marshal>
+        <to uri="activeMQProducer:order.update.queue"/>
+    </route>
+    <route id="CamelConsumerRoute">
+        <from uri="activeMQConsumer:order.update.queue"/>
+        <process ref="consumerProcessor"/>
+        <bean ref="consumerProcessor"/>
+    </route>
+</routes>
